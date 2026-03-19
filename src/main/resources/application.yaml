@@ -1,3 +1,22 @@
+server:
+  port: 8080
+
 spring:
   application:
-    name: hancel.cardenas
+    name: hancel_cardenas
+  data:
+    mongodb:
+      database: 05_hancel_cardenas
+      uri: mongodb+srv://hancelcardenastrujillo_db_user:alonso01987654@cluster0.k393i5v.mongodb.net/?appName=Cluster0
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: alpha
+    tags-sorter: alpha
+    # Esto es vital para WebFlux:
+    use-root-path: true 
+  webflux:
+    ui-path: /swagger-ui.html
